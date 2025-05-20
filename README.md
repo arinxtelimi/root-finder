@@ -1,5 +1,5 @@
 # root-finder
-Matlab modified zero-in program for root finding, utilizing a combination of Bisection and Inverse Quadratic Interpolation.
+Matlab modified zero-in program for root finding, utilizing a combination of Bisection and Inverse Quadratic Interpolation. The `modifiedzeroinn` function is designed to be tested with the provided `zeroinntest.m` script.
 # Modified Zeroin Root-Finding Algorithm
 
 ## Overview
@@ -20,18 +20,3 @@ The method follows this general workflow:
    - |f(x)| < func_tol (function value tolerance)
    - |b-a| < root_tol (interval width tolerance)
 
-## Usage
-```matlab
-function [root, info] = modifiedzeroinn(func, Int, params)
-% INPUTS:
-%   func   - Function handle (e.g., @(x) x^2-2)
-%   Int    - Struct with fields a and b defining interval [a,b]
-%   params - Struct with tolerance fields:
-%            .root_tol - Interval width tolerance
-%            .func_tol - Function value tolerance
-%
-% OUTPUTS:
-%   root   - Found root approximation
-%   info   - Struct with diagnostic information:
-%            .flag       - 0 (success) or 1 (failure)
-%            .func_evals - Number of function evaluations
